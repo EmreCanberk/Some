@@ -45,9 +45,9 @@
   position: absolute;
   border: none;
   border-radius: 50px;
-  padding: 10px 20px;
+  padding: 15px 30px;
   font-family: "Poppins", sans-serif;
-  font-size: 18px;
+  font-size: 2rem;
   cursor: pointer;
   transition: all 0.3s ease;
   background-color: #ff6b81;
@@ -80,13 +80,13 @@ body {
 }
 
 .question {
-  font-size: 3.5rem;
-  margin-bottom: 1rem;
+  font-size: 5rem;
+  margin-bottom: 2rem;
   color: #333; 
 }
 
 .result-container h2 {
-  font-size: 3.2rem;
+  font-size: 4rem;
   text-align: center;
   color: #333; 
 }
@@ -104,7 +104,15 @@ body {
   -moz-transform: translate(-100%, -50%);
   transition: 0.2s;
 }
+ .gif-question img {
+  width: 15rem;  
+  height: auto;  */
+  margin-bottom: 1rem;
+}
+
 .gif-result {
+  witdh: 20rem;
+  height: auto;
   border-radius: 10px;
   margin-bottom: 2rem;
 }
@@ -149,8 +157,8 @@ body {
 }
 
 .cssload-heartL {
-  width: 1em;
-  height: 1em;
+  width: 2.5em;
+  height: 2.5em;
   border: 1px solid #ff0000;
   background-color: #ff0000;
   content: "";
@@ -166,7 +174,7 @@ body {
     normal;
   -moz-animation: cssload-heartL 2.88s cubic-bezier(0.75, 0, 0.5, 1) infinite
     normal;
-  transform: translate(-28px, -27px);
+  transform: translate(-45%, -45%);
   -o-transform: translate(-28px, -27px);
   -ms-transform: translate(-28px, -27px);
   -webkit-transform: translate(-28px, -27px);
@@ -174,15 +182,15 @@ body {
 }
 
 .cssload-heartR {
-  width: 1em;
-  height: 1em;
+  width: 2.5em;
+  height: 2.5em;
   border: 1px solid #ff0000;
   background-color: #ff0000;
   content: "";
   position: absolute;
   display: block;
   border-radius: 100%;
-  transform: translate(28px, -27px);
+  transform: translate(45%, -45%);
   -o-transform: translate(28px, -27px);
   -ms-transform: translate(28px, -27px);
   -webkit-transform: translate(28px, -27px);
@@ -199,8 +207,8 @@ body {
 }
 
 .cssload-square {
-  width: 1em;
-  height: 1em;
+  width: 2.5em;
+  height: 2.5em;
   border: 1px solid #ff0000;
   background-color: #ff0000;
   position: relative;
@@ -223,14 +231,14 @@ body {
 }
 
 .cssload-shadow {
-  top: 97px;
+  top: 105%;
   left: 50%;
   content: "";
   position: relative;
   display: block;
   bottom: -0.5em;
-  width: 1em;
-  height: 0.24em;
+  width: 2.5em;
+  height: 0.5em;
   background-color: rgb(215, 215, 215);
   border: 1px solid rgb(215, 215, 215);
   border-radius: 50%;
@@ -441,6 +449,9 @@ body {
 
 <div class="container">
     <div class="question-container">
+         <div class="gif-question">
+        <img src="sad.gif" alt="Question GIF">
+    </div>
         <div class="question">Do U Love Me?</div>
         <div class="button-container">
             <button class="btn yes-btn js-yes-btn">Yes</button>
