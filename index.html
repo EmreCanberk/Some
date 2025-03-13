@@ -462,32 +462,30 @@ body {
 
 
 
-    noBtn.addEventListener("mouseover", () => {
-        location.reload(); 
-  
-  const maxX = window.innerWidth / 2 - noBtn.offsetWidth / 2; 
-  const maxY = window.innerHeight / 2 - noBtn.offsetHeight / 2; 
+   noBtn.addEventListener("mouseover", () => {
+    location.reload();
 
- 
-  const newX = Math.floor(Math.random() * maxX); 
-  const newY = Math.floor(Math.random() * maxY); 
+    const maxX = window.innerWidth / 2 - noBtn.offsetWidth / 2; 
+    const maxY = window.innerHeight / 2 - noBtn.offsetHeight / 2;
 
-  noBtn.style.left = ${newX}px;
-  noBtn.style.top = ${newY}px;
+    const newX = Math.floor(Math.random() * maxX); 
+    const newY = Math.floor(Math.random() * maxY); 
+
+    noBtn.style.left = newX + 'px';
+    noBtn.style.top = newY + 'px';
 });
 
+yesBtn.addEventListener("click", () => {
+    questionContainer.style.display = "none";
+    heartLoader.style.display = "inherit";
 
+    const timeoutId = setTimeout(() => {
+        heartLoader.style.display = "none";
+        resultContainer.style.display = "inherit";
+        gifResult.style.display = 'inherit'; 
+    }, 3000);
+});
 
-    yesBtn.addEventListener("click", () => {
-        questionContainer.style.display = "none";
-        heartLoader.style.display = "inherit";
-
-        const timeoutId = setTimeout(() => {
-            heartLoader.style.display = "none";
-            resultContainer.style.display = "inherit";
-            gifResult.play();
-        }, 3000);
-    });
 </script>
 
 </body>
