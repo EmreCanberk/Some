@@ -437,12 +437,17 @@ body {
             <button class="btn no-btn js-no-btn">Hayır</button>
         </div>
     </div>
-    <div class="result-container">
-        <div class="gif-result">
-            <img src="happy.gif" alt="GIF">
-        </div>
-        <h2>Seviyorum!</h2>
+  <div class="result-container">
+    <div class="gif-result">
+        <img src="https://emrecanberk.github.io/your-repository-name/sad.gif" alt="Sad GIF" class="before-result-gif">
     </div>
+    <h2>Seviyorum!</h2>
+    <div class="final-gif-container" style="display: none;">
+        <img src="https://emrecanberk.github.io/your-repository-name/happy.gif" alt="Happy GIF" class="final-result-gif">
+    </div>
+</div>
+
+
     <div class="cssload-main">
         <div class="cssload-heart"></div>
         <div class="cssload-heartL"></div>
@@ -479,15 +484,28 @@ body {
 
 
     yesBtn.addEventListener("click", () => {
-        questionContainer.style.display = "none";
-        heartLoader.style.display = "inherit";
+    questionContainer.style.display = "none";
+    heartLoader.style.display = "inherit";
+    
+  
+    const beforeResultGif = document.querySelector(".before-result-gif");
+    beforeResultGif.style.display = "block";
 
-        const timeoutId = setTimeout(() => {
-            heartLoader.style.display = "none";
-            resultContainer.style.display = "inherit";
-            gifResult.play();
-        }, 3000);
-    });
+    
+    const timeoutId = setTimeout(() => {
+        heartLoader.style.display = "none";
+        
+        
+        const finalGifContainer = document.querySelector(".final-gif-container");
+        finalGifContainer.style.display = "block";
+        
+      
+        const finalGif = document.querySelector(".final-result-gif");
+        finalGif.play();
+    }, 3000);
+});
+
+
 </script>
 
 </body>
