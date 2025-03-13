@@ -70,6 +70,10 @@ body {
   box-shadow: 0px 6px 20px rgba(255, 107, 129, 0.7);
   text-shadow: 1px 1px 5px rgba(255, 182, 193, 0.8);
 }
+.gif-question {
+  border-radius: 10px;
+  margin-bottom: 2rem;
+}
 
 .yes-btn {
   right: 54%;
@@ -431,23 +435,20 @@ body {
 
 <div class="container">
     <div class="question-container">
+        <div class="gif-question">
+            <img src="sad.gif" alt="GIF"> </div>
         <div class="question">Beni sever misin?</div>
         <div class="button-container">
             <button class="btn yes-btn js-yes-btn">Evet</button>
             <button class="btn no-btn js-no-btn">Hayır</button>
         </div>
     </div>
-  <div class="result-container">
-    <div class="gif-result">
-        <img src="https://emrecanberk.github.io/your-repository-name/sad.gif" alt="Sad GIF" class="before-result-gif">
+    <div class="result-container">
+        <div class="gif-result">
+            <img src="happy.gif" alt="GIF">
+        </div>
+        <h2>Seviyorum!</h2>
     </div>
-    <h2>Seviyorum!</h2>
-    <div class="final-gif-container" style="display: none;">
-        <img src="https://emrecanberk.github.io/your-repository-name/happy.gif" alt="Happy GIF" class="final-result-gif">
-    </div>
-</div>
-
-
     <div class="cssload-main">
         <div class="cssload-heart"></div>
         <div class="cssload-heartL"></div>
@@ -477,35 +478,22 @@ body {
   const newX = Math.floor(Math.random() * maxX); 
   const newY = Math.floor(Math.random() * maxY); 
 
-  noBtn.style.left = `${newX}px`;
-  noBtn.style.top = `${newY}px`;
+  noBtn.style.left = ${newX}px;
+  noBtn.style.top = ${newY}px;
 });
 
 
 
     yesBtn.addEventListener("click", () => {
-    questionContainer.style.display = "none";
-    heartLoader.style.display = "inherit";
-    
-  
-    const beforeResultGif = document.querySelector(".before-result-gif");
-    beforeResultGif.style.display = "block";
+        questionContainer.style.display = "none";
+        heartLoader.style.display = "inherit";
 
-    
-    const timeoutId = setTimeout(() => {
-        heartLoader.style.display = "none";
-        
-        
-        const finalGifContainer = document.querySelector(".final-gif-container");
-        finalGifContainer.style.display = "block";
-        
-      
-        const finalGif = document.querySelector(".final-result-gif");
-        finalGif.play();
-    }, 3000);
-});
-
-
+        const timeoutId = setTimeout(() => {
+            heartLoader.style.display = "none";
+            resultContainer.style.display = "inherit";
+            gifResult.play();
+        }, 3000);
+    });
 </script>
 
 </body>
